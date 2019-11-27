@@ -13,11 +13,26 @@
     <form action="" method="POST">
         {% csrf_token %}
         <span>Matrix: A</span>
-        <textarea name="A" rows="6">{{A}}</textarea>
+        <textarea name="A" rows="6" cols="20">{{A}}</textarea><br>
         <span>Matrix: B</span>
-        <textarea name="B" rows="6">{{B}}</textarea><br>
+        <textarea name="B" rows="6" cols="20">{{B}}</textarea><br>
         <button type="submit">Multiply</button>
     </form>
+
+    <div>
+        <textarea cols="60" rows="6" name="C">{{C}}</textarea>
+    </div>
+    <div>
+        <table border="1">
+            {% for r in C %}
+            <tr>
+                {% for c in r %}
+                <td>{{c}}</td>
+                {% endfor %}
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
 </body>
 
 </html>
