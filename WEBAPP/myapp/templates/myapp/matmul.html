@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Matmul</title>
+</head>
+
+<body>
+    <h1>Welcome to Matmul</h1>
+    <form action="" method="POST">
+        {% csrf_token %}
+        <span>Matrix: A</span>
+        <textarea name="A" rows="6">{{A}}</textarea>
+        <span>Matrix: B</span>
+        <textarea name="B" rows="6">{{B}}</textarea><br>
+        <button type="submit">Multiply</button>
+    </form>
+</body>
+
+</html>
